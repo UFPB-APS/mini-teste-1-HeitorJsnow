@@ -5,6 +5,7 @@ public class Venda {
     private String estadoDoCliente;
     private double total;
     
+    
     public ItemVenda[] getItens() {
         return this.itens;
     }

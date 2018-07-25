@@ -3,7 +3,8 @@ public class ItemVenda {
     private double quantidade;
     private Produto produto;
     private double precoVenda;
-    
+    private double lucro;
+   
     protected double getSubTotal() {
         return this.getQuantidade() * this.getPrecoVenda();
     }
@@ -33,4 +34,12 @@ public class ItemVenda {
         return produto;
     }
     
+    public double getLucro(){
+        return this.lucro;
+    }
+    
+    public void setLucro(double lucro){
+        lucro = this.getPrecoVenda() - produto.getPrecoCompra();
+        this.lucro = lucro;
+    }
 }
